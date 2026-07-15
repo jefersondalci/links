@@ -207,8 +207,20 @@
     padding:8px 14px; border-radius:6px; cursor:pointer; transition:border-color 0.15s ease, color 0.15s ease;
   }
   .btn-copy:hover{border-color:var(--accent-meter); color:var(--accent-meter);}
-  .modal-note{font-size:13px; color:var(--text-muted); margin-bottom:22px;}
+  .modal-note{font-size:13px; color:var(--text-muted); margin-bottom:0;}
   .modal-card .btn-primary{width:100%;}
+  .modal-step{display:flex; gap:14px; margin-bottom:20px;}
+  .modal-step:last-child{margin-bottom:0;}
+  .modal-step-num{
+    flex-shrink:0; width:24px; height:24px; border-radius:50%;
+    background:var(--bg-panel-raised); border:1px solid var(--line-strong);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono); font-size:12px; color:var(--accent-meter);
+  }
+  .modal-step-body{flex:1;}
+  .modal-step-label{font-size:14px; font-weight:500; color:var(--text-primary); margin-bottom:10px;}
+  .btn-secondary-action{background:var(--bg-panel-raised); color:var(--text-primary); border:1px solid var(--line-strong);}
+  .btn-secondary-action:hover{background:var(--bg-panel-raised); border-color:var(--accent-meter); color:var(--accent-meter);}
 
   /* FAQ */
   .faq-item{border-bottom:1px solid var(--line); padding:20px 0;}
@@ -469,12 +481,34 @@
     <button class="modal-close" onclick="closePixModal()" aria-label="Fechar">✕</button>
     <span class="eyebrow">Pagamento via Pix</span>
     <h3 id="pixModalTitle">Faça o pagamento via Pix e envie o comprovante para o WhatsApp para ativação.</h3>
-    <div class="pix-key-row">
-      <span class="pix-key" id="pixKeyValue">jefersondalci@gmail.com</span>
-      <button class="btn-copy" id="pixCopyBtn" onclick="copyPixKey()">Copiar</button>
+
+    <div class="modal-step">
+      <span class="modal-step-num">1</span>
+      <div class="modal-step-body">
+        <p class="modal-step-label">Pague com a chave Pix</p>
+        <div class="pix-key-row">
+          <span class="pix-key" id="pixKeyValue">jefersondalci@gmail.com</span>
+          <button class="btn-copy" id="pixCopyBtn" onclick="copyPixKey()">Copiar</button>
+        </div>
+        <p class="modal-note">Chave Pix (e-mail) · Assinatura R$ 14,90/mês</p>
+      </div>
     </div>
-    <p class="modal-note">Chave Pix (e-mail) · Assinatura R$ 14,90/mês</p>
-    <a class="btn-primary" href="https://wa.me/5521967057151?text=Ol%C3%A1!%20Acabei%20de%20fazer%20o%20pagamento%20via%20Pix%20do%20Por%20Km%2C%20segue%20o%20comprovante." target="_blank" rel="noopener">Enviar comprovante no WhatsApp</a>
+
+    <div class="modal-step">
+      <span class="modal-step-num">2</span>
+      <div class="modal-step-body">
+        <p class="modal-step-label">Envie o comprovante</p>
+        <a class="btn-primary" href="https://wa.me/5521967057151?text=Ol%C3%A1!%20Acabei%20de%20fazer%20o%20pagamento%20via%20Pix%20do%20Por%20Km%2C%20segue%20o%20comprovante." target="_blank" rel="noopener">Enviar comprovante no WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="modal-step">
+      <span class="modal-step-num">3</span>
+      <div class="modal-step-body">
+        <p class="modal-step-label">Faça seu cadastro no sistema</p>
+        <a class="btn-primary btn-secondary-action" href="https://jefersondalci.github.io/por-km/" target="_blank" rel="noopener">Faça seu cadastro aqui</a>
+      </div>
+    </div>
   </div>
 </div>
 
