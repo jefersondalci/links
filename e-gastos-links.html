@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>e-Gastos — Links</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --verde: #00e676;
+    --bg: #0a0c10;
+    --card: #1a1d27;
+    --borda: #252836;
+    --texto: #e8eaf2;
+    --muted: #7b7f96;
+    --faint: #3d4060;
+  }
+  body {
+    background: var(--bg);
+    color: var(--texto);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { width: 100%; max-width: 440px; padding: 56px 24px 48px; }
+
+  .identity { text-align: center; margin-bottom: 32px; }
+  .logo { font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .tagline { font-size: 13px; color: var(--muted); margin-top: 8px; }
+
+  .badge-strip {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    margin: 22px 0 36px;
+    font-size: 12px; color: var(--faint);
+  }
+  .badge-strip .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--verde); }
+
+  .link-list { display: flex; flex-direction: column; gap: 14px; }
+
+  .link-card {
+    display: flex; align-items: center; gap: 16px;
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: var(--texto);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .link-card:hover { border-color: var(--verde); transform: translateY(-2px); }
+  .link-card:active { transform: translateY(0); }
+
+  .link-card.featured {
+    background: var(--verde);
+    color: #04170c;
+    border-color: var(--verde);
+  }
+  .link-card.featured:hover { background: #33ec8e; border-color: #33ec8e; }
+  .link-card.featured .link-icon { background: rgba(4,23,12,0.14); }
+  .link-card.featured .link-sub { color: rgba(4,23,12,0.65); }
+  .link-card.featured .link-arrow { color: #04170c; }
+
+  .link-icon {
+    flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+  .link-body { flex: 1; min-width: 0; }
+  .link-title { font-size: 15.5px; font-weight: 600; line-height: 1.3; }
+  .link-sub { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .link-arrow { flex-shrink: 0; color: var(--faint); font-size: 16px; }
+
+  footer { text-align: center; margin-top: 44px; font-size: 12px; color: var(--faint); }
+  footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--borda); }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="identity">
+    <div class="logo">💸 e-Gastos</div>
+    <div class="tagline">controle financeiro na palma da mão</div>
+  </div>
+
+  <div class="badge-strip"><span class="dot"></span>escolha uma opção abaixo</div>
+
+  <div class="link-list">
+    <a class="link-card featured" href="e-gastos-pagina-de-vendas.html">
+      <span class="link-icon">💎</span>
+      <span class="link-body">
+        <div class="link-title">Assinar o Plano Completo — R$ 14,90/mês</div>
+        <div class="link-sub">Veja todas as funcionalidades e ative sua conta</div>
+      </span>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a class="link-card" href="https://e-gastos.vercel.app" target="_blank" rel="noopener">
+      <span class="link-icon">🏠</span>
+      <span class="link-body">
+        <div class="link-title">Acessar o sistema e-Gastos</div>
+        <div class="link-sub">Cadastro gratuito ou login para assinantes</div>
+      </span>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link-card" href="guia-e-gastos.pdf" target="_blank" rel="noopener">
+      <span class="link-icon">📙</span>
+      <span class="link-body">
+        <div class="link-title">Guia completo de uso</div>
+        <div class="link-sub">Manual passo a passo com todas as telas (PDF)</div>
+      </span>
+      <span class="link-arrow">↓</span>
+    </a>
+  </div>
+
+  <footer>
+    Dúvidas? <a href="https://wa.me/5521967057151" target="_blank" rel="noopener">Fale no WhatsApp</a>
+  </footer>
+</div>
+
+</body>
+</html>
