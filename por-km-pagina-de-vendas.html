@@ -221,6 +221,19 @@
   .modal-step-label{font-size:14px; font-weight:500; color:var(--text-primary); margin-bottom:10px;}
   .btn-secondary-action{background:var(--bg-panel-raised); color:var(--text-primary); border:1px solid var(--line-strong);}
   .btn-secondary-action:hover{background:var(--bg-panel-raised); border-color:var(--accent-meter); color:var(--accent-meter);}
+  .modal-guarantee{
+    display:flex; gap:10px; align-items:flex-start;
+    margin-top:24px; padding-top:20px;
+    border-top:1px dashed var(--line-strong);
+  }
+  .modal-guarantee-icon{
+    flex-shrink:0; width:20px; height:20px; border-radius:50%;
+    background:rgba(255,159,28,0.14); color:var(--accent-meter);
+    display:flex; align-items:center; justify-content:center;
+    font-size:12px; font-family:var(--font-mono); margin-top:1px;
+  }
+  .modal-guarantee p{font-size:13px; color:var(--text-secondary); line-height:1.5;}
+  .modal-guarantee p strong{color:var(--text-primary); font-weight:600;}
 
   /* FAQ */
   .faq-item{border-bottom:1px solid var(--line); padding:20px 0;}
@@ -508,6 +521,11 @@
         <p class="modal-step-label">Faça seu cadastro no sistema</p>
         <a class="btn-primary btn-secondary-action" href="https://jefersondalci.github.io/por-km/" target="_blank" rel="noopener">Faça seu cadastro aqui</a>
       </div>
+    </div>
+
+    <div class="modal-guarantee">
+      <span class="modal-guarantee-icon">✓</span>
+      <p>Você tem <strong>7 dias corridos</strong> após o pagamento para cancelar e receber o reembolso total, caso não goste.</p>
     </div>
   </div>
 </div>
